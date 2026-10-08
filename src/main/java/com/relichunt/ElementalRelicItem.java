@@ -40,7 +40,7 @@ public class ElementalRelicItem extends Item {
                     Vec3d forward = player.getRotationVec(1.0F).normalize();
                     player.addVelocity(forward.x * 2.0, forward.y * 0.6 + 0.35, forward.z * 2.0);
                     player.velocityModified = true;
-                    player.getItemCooldownManager().set(this, 160);
+                    player.getItemCooldownManager().set(this, 60);
                 }
                 case ABYSS -> {
                     for (LivingEntity target : serverWorld.getEntitiesByClass(LivingEntity.class,
