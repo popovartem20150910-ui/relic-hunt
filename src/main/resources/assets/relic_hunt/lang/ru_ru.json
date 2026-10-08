@@ -3,5 +3,6 @@
   "item.relic_hunt.magma_heart": "Сердце магмы",
   "item.relic_hunt.wanderer_feather": "Перо странника",
   "item.relic_hunt.abyss_eye": "Око бездны",
-  "item.relic_hunt.ruby": "Рубин"
+  "item.relic_hunt.ruby": "Рубин",
+  "block.relic_hunt.ruby_ore": "Рубиновая руда"
 }
