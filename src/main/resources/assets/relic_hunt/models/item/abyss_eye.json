@@ -2,24 +2,5 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "relic_hunt:item/abyss_eye"
-  },
-  "display": {
-    "gui": {
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "translation": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        0.72,
-        0.72,
-        0.72
-      ]
-    }
   }
 }
