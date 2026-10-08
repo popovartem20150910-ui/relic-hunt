@@ -13,6 +13,7 @@ public class RelicHunt implements ModInitializer {
     public static final Item LIGHTNING_CRYSTAL = new LightningCrystalItem(new Item.Settings().maxCount(1));
     public static final Item MAGMA_HEART = new ElementalRelicItem(ElementalRelicItem.Power.MAGMA, new Item.Settings().maxCount(1));
     public static final Item WANDERER_FEATHER = new ElementalRelicItem(ElementalRelicItem.Power.DASH, new Item.Settings().maxCount(1));
+    public static final Item RUBY = new Item(new Item.Settings());
     public static final Item ABYSS_EYE = new ElementalRelicItem(ElementalRelicItem.Power.ABYSS, new Item.Settings().maxCount(1));
 
     @Override
@@ -21,6 +22,8 @@ public class RelicHunt implements ModInitializer {
         register("magma_heart", MAGMA_HEART);
         register("wanderer_feather", WANDERER_FEATHER);
         register("abyss_eye", ABYSS_EYE);
+        Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "ruby"), RUBY);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(RUBY));
     }
     private static void register(String id, Item item) {
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, id), item);
