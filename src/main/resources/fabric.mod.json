@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "relic_hunt",
+  "version": "${version}",
+  "name": "Relic Hunt",
+  "description": "Magical relics for Minecraft.",
+  "authors": [
+    "Relic Hunt team"
+  ],
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.relichunt.RelicHunt"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
