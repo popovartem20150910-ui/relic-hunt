@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "relic_hunt:ruby_ore"
+    "relic_hunt:ruby_ore",
+    "relic_hunt:polishing_stone"
   ]
 }

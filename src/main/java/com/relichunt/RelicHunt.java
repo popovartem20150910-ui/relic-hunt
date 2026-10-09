@@ -2,6 +2,9 @@ package com.relichunt;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.minecraft.util.ActionResult;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -17,6 +20,7 @@ public class RelicHunt implements ModInitializer {
     public static final Item LIGHTNING_CRYSTAL = new LightningCrystalItem(new Item.Settings().maxCount(1));
     public static final Item MAGMA_HEART = new ElementalRelicItem(ElementalRelicItem.Power.MAGMA, new Item.Settings().maxCount(1));
     public static final Item WANDERER_FEATHER = new ElementalRelicItem(ElementalRelicItem.Power.DASH, new Item.Settings().maxCount(1));
+    public static final Block POLISHING_STONE = new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK));
     public static final Block RUBY_ORE = new Block(AbstractBlock.Settings.copy(Blocks.IRON_ORE));
     public static final Item RAW_RUBY = new Item(new Item.Settings());
     public static final Item RUBY_SHARD = new Item(new Item.Settings());
@@ -33,9 +37,22 @@ public class RelicHunt implements ModInitializer {
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "ruby_shard"), RUBY_SHARD);
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "ruby"), RUBY);
         Registry.register(Registries.BLOCK, Identifier.of(MOD_ID, "ruby_ore"), RUBY_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(MOD_ID, "polishing_stone"), POLISHING_STONE);
+        Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "polishing_stone"), new BlockItem(POLISHING_STONE, new Item.Settings()));
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "ruby_ore"), new BlockItem(RUBY_ORE, new Item.Settings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> entries.add(RUBY_ORE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> { entries.add(RUBY_ORE); entries.add(POLISHING_STONE); });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> { entries.add(RAW_RUBY); entries.add(RUBY_SHARD); entries.add(RUBY); });
+        UseBlockCallback.EVENT.register((player, world, hand, hit) -> {
+            if (!world.getBlockState(hit.getBlockPos()).isOf(POLISHING_STONE)) return ActionResult.PASS;
+            ItemStack held = player.getStackInHand(hand);
+            if (!held.isOf(RUBY_SHARD)) return ActionResult.PASS;
+            if (!world.isClient) {
+                if (!player.getAbilities().creativeMode) held.decrement(1);
+                ItemStack result = new ItemStack(RUBY);
+                if (!player.getInventory().insertStack(result)) player.dropItem(result, false);
+            }
+            return ActionResult.SUCCESS;
+        });
     }
     private static void register(String id, Item item) {
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, id), item);

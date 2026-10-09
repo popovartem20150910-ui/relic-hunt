@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SRS",
+    "ISI",
+    "SRS"
+  ],
+  "key": {
+    "S": "minecraft:stone",
+    "R": "relic_hunt:ruby_shard",
+    "I": "minecraft:iron_ingot"
+  },
+  "result": {
+    "id": "relic_hunt:polishing_stone",
+    "count": 1
+  }
+}
