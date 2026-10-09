@@ -19,6 +19,7 @@ public class RelicHunt implements ModInitializer {
     public static final Item WANDERER_FEATHER = new ElementalRelicItem(ElementalRelicItem.Power.DASH, new Item.Settings().maxCount(1));
     public static final Block RUBY_ORE = new Block(AbstractBlock.Settings.copy(Blocks.IRON_ORE));
     public static final Item RAW_RUBY = new Item(new Item.Settings());
+    public static final Item RUBY_SHARD = new Item(new Item.Settings());
     public static final Item RUBY = new Item(new Item.Settings());
     public static final Item ABYSS_EYE = new ElementalRelicItem(ElementalRelicItem.Power.ABYSS, new Item.Settings().maxCount(1));
 
@@ -29,11 +30,12 @@ public class RelicHunt implements ModInitializer {
         register("wanderer_feather", WANDERER_FEATHER);
         register("abyss_eye", ABYSS_EYE);
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "raw_ruby"), RAW_RUBY);
+        Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "ruby_shard"), RUBY_SHARD);
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "ruby"), RUBY);
         Registry.register(Registries.BLOCK, Identifier.of(MOD_ID, "ruby_ore"), RUBY_ORE);
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "ruby_ore"), new BlockItem(RUBY_ORE, new Item.Settings()));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> entries.add(RUBY_ORE));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> { entries.add(RAW_RUBY); entries.add(RUBY); });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> { entries.add(RAW_RUBY); entries.add(RUBY_SHARD); entries.add(RUBY); });
     }
     private static void register(String id, Item item) {
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, id), item);
