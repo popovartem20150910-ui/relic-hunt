@@ -1,16 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
-    " F ",
-    "FPF",
-    " F "
+    "FGF",
+    "GLG",
+    "FGF"
   ],
   "key": {
     "F": {
       "item": "minecraft:feather"
     },
-    "P": {
-      "item": "minecraft:phantom_membrane"
+    "G": {
+      "item": "minecraft:blue_stained_glass_pane"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
     }
   },
   "result": {
