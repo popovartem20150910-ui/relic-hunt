@@ -10,9 +10,14 @@
     "N": {
       "item": "minecraft:gold_nugget"
     },
-    "A": {
-      "item": "minecraft:amethyst_shard"
-    },
+    "A": [
+      {
+        "item": "minecraft:amethyst_shard"
+      },
+      {
+        "item": "minecraft:purple_dye"
+      }
+    ],
     "E": {
       "item": "minecraft:ender_eye"
     }
