@@ -7,9 +7,15 @@
     "CRC"
   ],
   "key": {
-    "C": "minecraft:cobblestone",
-    "R": "relic_hunt:ruby_shard",
-    "I": "minecraft:iron_ingot"
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "R": {
+      "item": "relic_hunt:ruby_shard"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
   },
   "result": {
     "id": "relic_hunt:polishing_stone",
