@@ -2,12 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "SRS",
-    "ISI",
-    "SRS"
+    "CRC",
+    "ICI",
+    "CRC"
   ],
   "key": {
-    "S": "minecraft:stone",
+    "C": "minecraft:cobblestone",
     "R": "relic_hunt:ruby_shard",
     "I": "minecraft:iron_ingot"
   },
