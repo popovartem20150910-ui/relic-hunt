@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.util.ActionResult;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.block.AbstractBlock;
@@ -28,6 +29,7 @@ public class RelicHunt implements ModInitializer {
     public static final Item RUBY_SHARD = new Item(new Item.Settings());
     public static final Item RUBY = new Item(new Item.Settings());
     public static final Item RUBY_SWORD = new SwordItem(ToolMaterials.DIAMOND, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 4, -2.4f)));
+    public static final Item RUBY_PICKAXE = new PickaxeItem(ToolMaterials.DIAMOND, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 2, -2.8f)));
     public static final Item ABYSS_EYE = new ElementalRelicItem(ElementalRelicItem.Power.ABYSS, new Item.Settings().maxCount(1));
 
     @Override
@@ -37,6 +39,7 @@ public class RelicHunt implements ModInitializer {
         register("wanderer_feather", WANDERER_FEATHER);
         register("abyss_eye", ABYSS_EYE);
         register("ruby_sword", RUBY_SWORD);
+        register("ruby_pickaxe", RUBY_PICKAXE);
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "raw_ruby"), RAW_RUBY);
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "ruby_shard"), RUBY_SHARD);
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "ruby"), RUBY);
