@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "relic_hunt:block/ruby_ore"
+  }
+}

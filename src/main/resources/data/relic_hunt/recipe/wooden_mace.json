@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","category":"equipment","pattern":["RRR","RSR"," S "],"key":{"R":{"item":"minecraft:oak_planks"},"S":{"item":"minecraft:stick"}},"result":{"id":"relic_hunt:wooden_mace","count":1}}

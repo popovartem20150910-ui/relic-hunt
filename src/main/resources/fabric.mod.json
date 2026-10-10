@@ -11,6 +11,9 @@
   "entrypoints": {
     "main": [
       "com.relichunt.RelicHunt"
+    ],
+    "client": [
+      "com.relichunt.RelicHuntUpdateClient"
     ]
   },
   "depends": {
