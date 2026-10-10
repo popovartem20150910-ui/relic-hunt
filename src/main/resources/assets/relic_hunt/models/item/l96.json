@@ -1,1 +1,0 @@
-{"parent":"minecraft:item/handheld","textures":{"layer0":"minecraft:item/crossbow_standby"},"overrides":[{"predicate":{"charged":1},"model":"minecraft:item/crossbow_arrow"},{"predicate":{"charged":1,"firework":1},"model":"minecraft:item/crossbow_firework"}]}
