@@ -35,9 +35,9 @@ public class RelicHunt {
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
     public static final Supplier<Item> WANDERER_FEATHER = ITEMS.register("wanderer_feather", () -> new WandererFeatherItem(new Item.Properties().stacksTo(1)));
-    public static final Supplier<Item> LIGHTNING_CRYSTAL = ITEMS.registerSimpleItem("lightning_crystal");
-    public static final Supplier<Item> MAGMA_HEART = ITEMS.registerSimpleItem("magma_heart");
-    public static final Supplier<Item> ABYSS_EYE = ITEMS.registerSimpleItem("abyss_eye");
+    public static final Supplier<Item> LIGHTNING_CRYSTAL = ITEMS.register("lightning_crystal", () -> new LightningCrystalItem(new Item.Properties().stacksTo(1)));
+    public static final Supplier<Item> MAGMA_HEART = ITEMS.register("magma_heart", () -> new ElementalRelicItem(ElementalRelicItem.Power.MAGMA, new Item.Properties().stacksTo(1)));
+    public static final Supplier<Item> ABYSS_EYE = ITEMS.register("abyss_eye", () -> new ElementalRelicItem(ElementalRelicItem.Power.ABYSS, new Item.Properties().stacksTo(1)));
     public static final Supplier<Item> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new SwordItem(Tiers.DIAMOND, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.DIAMOND, 3, -2.4F))));
     public static final Supplier<Item> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe", () -> new PickaxeItem(Tiers.DIAMOND, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.DIAMOND, 1.0F, -2.8F))));
     public static final Supplier<Item> RUBY_AXE = ITEMS.register("ruby_axe", () -> new AxeItem(Tiers.DIAMOND, new Item.Properties().attributes(AxeItem.createAttributes(Tiers.DIAMOND, 5.0F, -3.0F))));
