@@ -10,5 +10,13 @@
   "block.relic_hunt.polishing_stone": "Полировочный камень",
   "item.relic_hunt.ruby_sword": "Рубиновый меч",
   "item.relic_hunt.ruby_pickaxe": "Рубиновая кирка",
-  "item.relic_hunt.ruby_axe": "Рубиновый топор"
+  "item.relic_hunt.ruby_axe": "Рубиновый топор",
+  "item.relic_hunt.ruby_shovel": "Рубиновая лопата",
+  "item.relic_hunt.ruby_hoe": "Рубиновая мотыга",
+  "item.relic_hunt.wooden_mace": "Деревянная булава",
+  "item.relic_hunt.diamond_mace": "Алмазная булава",
+  "item.relic_hunt.ruby_mace": "Рубиновая булава",
+  "block.relic_hunt.gold_door": "Золотая дверь",
+  "block.relic_hunt.diamond_door": "Алмазная дверь",
+  "block.relic_hunt.netherite_door": "Незеритовая дверь"
 }
