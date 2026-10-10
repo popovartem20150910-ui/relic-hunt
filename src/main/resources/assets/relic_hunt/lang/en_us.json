@@ -1,3 +1,22 @@
 {
-  "item.relic_hunt.lightning_crystal": "Lightning Crystal"
+  "item.relic_hunt.lightning_crystal": "Lightning Crystal",
+  "item.relic_hunt.magma_heart": "Magma Heart",
+  "item.relic_hunt.wanderer_feather": "Wanderer's Feather",
+  "item.relic_hunt.abyss_eye": "Abyss Eye",
+  "item.relic_hunt.ruby": "Ruby",
+  "block.relic_hunt.ruby_ore": "Ruby Ore",
+  "item.relic_hunt.raw_ruby": "Raw Ruby",
+  "item.relic_hunt.ruby_shard": "Ruby Shard",
+  "block.relic_hunt.polishing_stone": "Polishing Stone",
+  "item.relic_hunt.ruby_sword": "Ruby Sword",
+  "item.relic_hunt.ruby_pickaxe": "Ruby Pickaxe",
+  "item.relic_hunt.ruby_axe": "Ruby Axe",
+  "item.relic_hunt.ruby_shovel": "Ruby Shovel",
+  "item.relic_hunt.ruby_hoe": "Ruby Hoe",
+  "item.relic_hunt.wooden_mace": "Wooden Mace",
+  "item.relic_hunt.diamond_mace": "Diamond Mace",
+  "item.relic_hunt.ruby_mace": "Ruby Mace",
+  "block.relic_hunt.gold_door": "Gold Door",
+  "block.relic_hunt.diamond_door": "Diamond Door",
+  "block.relic_hunt.netherite_door": "Netherite Door"
 }

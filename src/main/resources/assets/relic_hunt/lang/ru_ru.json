@@ -1,3 +1,22 @@
 {
-  "item.relic_hunt.lightning_crystal": "Грозовой кристалл"
+  "item.relic_hunt.lightning_crystal": "Грозовой кристалл",
+  "item.relic_hunt.magma_heart": "Сердце магмы",
+  "item.relic_hunt.wanderer_feather": "Перо странника",
+  "item.relic_hunt.abyss_eye": "Око бездны",
+  "item.relic_hunt.ruby": "Рубин",
+  "block.relic_hunt.ruby_ore": "Рубиновая руда",
+  "item.relic_hunt.raw_ruby": "Необработанный рубин",
+  "item.relic_hunt.ruby_shard": "Рубиновый осколок",
+  "block.relic_hunt.polishing_stone": "Полировочный камень",
+  "item.relic_hunt.ruby_sword": "Рубиновый меч",
+  "item.relic_hunt.ruby_pickaxe": "Рубиновая кирка",
+  "item.relic_hunt.ruby_axe": "Рубиновый топор",
+  "item.relic_hunt.ruby_shovel": "Рубиновая лопата",
+  "item.relic_hunt.ruby_hoe": "Рубиновая мотыга",
+  "item.relic_hunt.wooden_mace": "Деревянная булава",
+  "item.relic_hunt.diamond_mace": "Алмазная булава",
+  "item.relic_hunt.ruby_mace": "Рубиновая булава",
+  "block.relic_hunt.gold_door": "Золотая дверь",
+  "block.relic_hunt.diamond_door": "Алмазная дверь",
+  "block.relic_hunt.netherite_door": "Незеритовая дверь"
 }
