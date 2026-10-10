@@ -5,6 +5,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -38,5 +40,20 @@ public class RelicHunt {
     public RelicHunt(IEventBus modBus) {
         BLOCKS.register(modBus);
         ITEMS.register(modBus);
+        modBus.addListener(this::addCreativeTabs);
+    }
+    private void addCreativeTabs(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(WANDERER_FEATHER.get());
+        }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(RAW_RUBY.get());
+            event.accept(RUBY_SHARD.get());
+            event.accept(RUBY.get());
+        }
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(RUBY_ORE_ITEM.get());
+            event.accept(POLISHING_STONE_ITEM.get());
+        }
     }
 }
