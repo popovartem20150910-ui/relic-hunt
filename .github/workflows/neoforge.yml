@@ -1,0 +1,33 @@
+name: Build NeoForge 1.21.1 (experimental)
+on:
+  push:
+    branches: ['feature/neoforge-1.21.1-tacz']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  neoforge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    defaults:
+      run:
+        working-directory: neoforge
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.12.1'
+      - name: Build NeoForge (fail on compilation errors)
+        run: gradle --no-daemon --stacktrace clean build
+      - name: Upload NeoForge JAR (only on successful build)
+        uses: actions/upload-artifact@v4
+        with:
+          name: relic-hunt-neoforge-1.21.1-EXPERIMENTAL
+          path: neoforge/build/libs/*.jar
+          if-no-files-found: error
