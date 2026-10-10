@@ -41,6 +41,7 @@ public class RelicHunt implements ModInitializer {
     public static final Item RUBY_HOE = new HoeItem(ToolMaterials.DIAMOND, new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ToolMaterials.DIAMOND, -2, -1.0f)));
     public static final Item WOODEN_MACE = new MaceItem(new Item.Settings().maxDamage(59).attributeModifiers(MaceItem.createAttributeModifiers()));
     public static final Item DIAMOND_MACE = new MaceItem(new Item.Settings().maxDamage(1561).attributeModifiers(MaceItem.createAttributeModifiers()));
+    public static final Item NETHERITE_MACE = new MaceItem(new Item.Settings().maxDamage(2031).fireproof().attributeModifiers(MaceItem.createAttributeModifiers()));
     public static final Item RUBY_MACE = new MaceItem(new Item.Settings().maxDamage(2031).attributeModifiers(MaceItem.createAttributeModifiers()));
     public static final Block GOLD_DOOR = new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(Blocks.IRON_DOOR));
     public static final Block DIAMOND_DOOR = new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(Blocks.IRON_DOOR));
@@ -61,6 +62,7 @@ public class RelicHunt implements ModInitializer {
         register("wooden_mace", WOODEN_MACE);
         register("diamond_mace", DIAMOND_MACE);
         register("ruby_mace", RUBY_MACE);
+        register("netherite_mace", NETHERITE_MACE);
         registerDoor("gold_door", GOLD_DOOR);
         registerDoor("diamond_door", DIAMOND_DOOR);
         registerDoor("netherite_door", NETHERITE_DOOR);

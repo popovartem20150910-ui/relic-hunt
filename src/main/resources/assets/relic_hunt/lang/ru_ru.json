@@ -18,5 +18,6 @@
   "item.relic_hunt.ruby_mace": "Рубиновая булава",
   "block.relic_hunt.gold_door": "Золотая дверь",
   "block.relic_hunt.diamond_door": "Алмазная дверь",
-  "block.relic_hunt.netherite_door": "Незеритовая дверь"
+  "block.relic_hunt.netherite_door": "Незеритовая дверь",
+  "item.relic_hunt.netherite_mace": "Незеритовая булава"
 }
