@@ -26,6 +26,7 @@ public class RelicHunt {
     public static final Supplier<Block> POLISHING_STONE = BLOCKS.register("polishing_stone",
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
+    public static final Supplier<Item> WANDERER_FEATHER = ITEMS.register("wanderer_feather", () -> new WandererFeatherItem(new Item.Properties().stacksTo(1)));
     public static final Supplier<Item> RAW_RUBY = ITEMS.registerSimpleItem("raw_ruby");
     public static final Supplier<Item> RUBY_SHARD = ITEMS.registerSimpleItem("ruby_shard");
     public static final Supplier<Item> RUBY = ITEMS.registerSimpleItem("ruby");
