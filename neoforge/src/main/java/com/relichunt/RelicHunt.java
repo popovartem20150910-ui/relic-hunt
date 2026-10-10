@@ -29,6 +29,18 @@ public class RelicHunt {
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
     public static final Supplier<Item> WANDERER_FEATHER = ITEMS.register("wanderer_feather", () -> new WandererFeatherItem(new Item.Properties().stacksTo(1)));
+    public static final Supplier<Item> LIGHTNING_CRYSTAL = ITEMS.registerSimpleItem("lightning_crystal");
+    public static final Supplier<Item> MAGMA_HEART = ITEMS.registerSimpleItem("magma_heart");
+    public static final Supplier<Item> ABYSS_EYE = ITEMS.registerSimpleItem("abyss_eye");
+    public static final Supplier<Item> RUBY_SWORD = ITEMS.registerSimpleItem("ruby_sword");
+    public static final Supplier<Item> RUBY_PICKAXE = ITEMS.registerSimpleItem("ruby_pickaxe");
+    public static final Supplier<Item> RUBY_AXE = ITEMS.registerSimpleItem("ruby_axe");
+    public static final Supplier<Item> RUBY_SHOVEL = ITEMS.registerSimpleItem("ruby_shovel");
+    public static final Supplier<Item> RUBY_HOE = ITEMS.registerSimpleItem("ruby_hoe");
+    public static final Supplier<Item> WOODEN_MACE = ITEMS.registerSimpleItem("wooden_mace");
+    public static final Supplier<Item> DIAMOND_MACE = ITEMS.registerSimpleItem("diamond_mace");
+    public static final Supplier<Item> RUBY_MACE = ITEMS.registerSimpleItem("ruby_mace");
+    public static final Supplier<Item> NETHERITE_MACE = ITEMS.registerSimpleItem("netherite_mace");
     public static final Supplier<Item> RAW_RUBY = ITEMS.registerSimpleItem("raw_ruby");
     public static final Supplier<Item> RUBY_SHARD = ITEMS.registerSimpleItem("ruby_shard");
     public static final Supplier<Item> RUBY = ITEMS.registerSimpleItem("ruby");
@@ -45,6 +57,18 @@ public class RelicHunt {
     private void addCreativeTabs(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(WANDERER_FEATHER.get());
+            event.accept(LIGHTNING_CRYSTAL.get());
+            event.accept(MAGMA_HEART.get());
+            event.accept(ABYSS_EYE.get());
+            event.accept(RUBY_SWORD.get());
+            event.accept(RUBY_PICKAXE.get());
+            event.accept(RUBY_AXE.get());
+            event.accept(RUBY_SHOVEL.get());
+            event.accept(RUBY_HOE.get());
+            event.accept(WOODEN_MACE.get());
+            event.accept(DIAMOND_MACE.get());
+            event.accept(RUBY_MACE.get());
+            event.accept(NETHERITE_MACE.get());
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(RAW_RUBY.get());
