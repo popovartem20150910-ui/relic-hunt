@@ -19,5 +19,6 @@
   "block.relic_hunt.gold_door": "Gold Door",
   "block.relic_hunt.diamond_door": "Diamond Door",
   "block.relic_hunt.netherite_door": "Netherite Door",
-  "item.relic_hunt.netherite_mace": "Netherite Mace"
+  "item.relic_hunt.netherite_mace": "Netherite Mace",
+  "item.relic_hunt.tide_crystal": "Tide Crystal"
 }

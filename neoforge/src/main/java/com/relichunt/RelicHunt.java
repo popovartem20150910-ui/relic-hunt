@@ -36,6 +36,7 @@ public class RelicHunt {
 
     public static final Supplier<Item> WANDERER_FEATHER = ITEMS.register("wanderer_feather", () -> new WandererFeatherItem(new Item.Properties().stacksTo(1)));
     public static final Supplier<Item> LIGHTNING_CRYSTAL = ITEMS.register("lightning_crystal", () -> new LightningCrystalItem(new Item.Properties().stacksTo(1)));
+    public static final Supplier<Item> TIDE_CRYSTAL = ITEMS.register("tide_crystal", () -> new TideCrystalItem(new Item.Properties().stacksTo(1)));
     public static final Supplier<Item> MAGMA_HEART = ITEMS.register("magma_heart", () -> new ElementalRelicItem(ElementalRelicItem.Power.MAGMA, new Item.Properties().stacksTo(1)));
     public static final Supplier<Item> ABYSS_EYE = ITEMS.register("abyss_eye", () -> new ElementalRelicItem(ElementalRelicItem.Power.ABYSS, new Item.Properties().stacksTo(1)));
     public static final Supplier<Item> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new SwordItem(Tiers.DIAMOND, new Item.Properties().attributes(SwordItem.createAttributes(Tiers.DIAMOND, 3, -2.4F))));
@@ -64,6 +65,7 @@ public class RelicHunt {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(WANDERER_FEATHER.get());
             event.accept(LIGHTNING_CRYSTAL.get());
+            event.accept(TIDE_CRYSTAL.get());
             event.accept(MAGMA_HEART.get());
             event.accept(ABYSS_EYE.get());
             event.accept(RUBY_SWORD.get());
