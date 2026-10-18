@@ -20,5 +20,6 @@
   "block.relic_hunt.diamond_door": "Diamond Door",
   "block.relic_hunt.netherite_door": "Netherite Door",
   "item.relic_hunt.netherite_mace": "Netherite Mace",
-  "item.relic_hunt.tide_crystal": "Tide Crystal"
+  "item.relic_hunt.tide_crystal": "Tide Crystal",
+  "item.relic_hunt.teleport_crystal": "Teleportation Crystal"
 }
