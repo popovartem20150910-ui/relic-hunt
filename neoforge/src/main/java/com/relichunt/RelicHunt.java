@@ -36,6 +36,7 @@ public class RelicHunt {
 
     public static final Supplier<Item> WANDERER_FEATHER = ITEMS.register("wanderer_feather", () -> new WandererFeatherItem(new Item.Properties().stacksTo(1)));
     public static final Supplier<Item> LIGHTNING_CRYSTAL = ITEMS.register("lightning_crystal", () -> new LightningCrystalItem(new Item.Properties().stacksTo(1)));
+    public static final Supplier<Item> TELEPORT_CRYSTAL = ITEMS.register("teleport_crystal", () -> new TeleportCrystalItem(new Item.Properties().stacksTo(1)));
     public static final Supplier<Item> TIDE_CRYSTAL = ITEMS.register("tide_crystal", () -> new TideCrystalItem(new Item.Properties().stacksTo(1)));
     public static final Supplier<Item> MAGMA_HEART = ITEMS.register("magma_heart", () -> new ElementalRelicItem(ElementalRelicItem.Power.MAGMA, new Item.Properties().stacksTo(1)));
     public static final Supplier<Item> ABYSS_EYE = ITEMS.register("abyss_eye", () -> new ElementalRelicItem(ElementalRelicItem.Power.ABYSS, new Item.Properties().stacksTo(1)));
@@ -66,6 +67,7 @@ public class RelicHunt {
             event.accept(WANDERER_FEATHER.get());
             event.accept(LIGHTNING_CRYSTAL.get());
             event.accept(TIDE_CRYSTAL.get());
+            event.accept(TELEPORT_CRYSTAL.get());
             event.accept(MAGMA_HEART.get());
             event.accept(ABYSS_EYE.get());
             event.accept(RUBY_SWORD.get());
